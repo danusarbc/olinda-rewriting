@@ -8,6 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class mainFrame extends JFrame {
 
@@ -41,11 +44,23 @@ public class mainFrame extends JFrame {
 		contentPane.setLayout(null);
 		
 		JTextArea globalquerytext = new JTextArea();
-		globalquerytext.setBounds(27, 69, 376, 176);
+		globalquerytext.setBounds(38, 69, 413, 186);
 		contentPane.add(globalquerytext);
 		
 		JLabel lblGlobalQuery = new JLabel("Global Query");
 		lblGlobalQuery.setBounds(28, 24, 123, 33);
 		contentPane.add(lblGlobalQuery);
+		
+		JButton btnRewriti = new JButton("Rewrite");
+		btnRewriti.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnRewriti.setBounds(506, 74, 117, 25);
+		contentPane.add(btnRewriti);
+		
+		JButton btnClear = new JButton("Clear");
+		btnClear.setBounds(506, 143, 117, 25);
+		contentPane.add(btnClear);
 	}
 }
