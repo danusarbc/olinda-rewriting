@@ -1,0 +1,12 @@
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+
+
+SELECT DISTINCT ?name1 ?name2 WHERE {
+  ?article rdf:type swrc:Article . 
+  ?article swrc:publisher ?author1 .
+  ?article swrc:publisher ?author2 .
+  ?author1 swrc:name ?name1.
+  ?author2 swrc:name ?name2.  
+  FILTER (?author1 != ?author2)
+}

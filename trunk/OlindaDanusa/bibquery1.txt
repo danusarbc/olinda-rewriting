@@ -1,0 +1,9 @@
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+
+SELECT DISTINCT ?yr
+WHERE {
+  ?journal rdf:type swrc:Journal .
+  ?journal swrc:journal_name "ACM Computing Surveys" .
+  ?journal swrc:year ?yr .
+}

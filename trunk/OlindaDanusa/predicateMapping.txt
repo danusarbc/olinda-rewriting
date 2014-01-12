@@ -1,0 +1,21 @@
+(http://swrc.ontoware.org/ontology#title, http://swrc.ontoware.org/ontology#Article, ar) <- (akt, akt:has-title, akt:Article-Reference, ar) AND (kisti, kisti:engNameOfAccomplishment, kisti:Accomplishment, ar) 
+(http://swrc.ontoware.org/ontology#year, http://swrc.ontoware.org/ontology#Article, ar) <- (akt, akt:has-date, akt:Article-Reference, ar) AND (kisti, kisti:yearOfAccomplishment, kisti:Accomplishment, ar)
+(http://swrc.ontoware.org/ontology#abstract, http://swrc.ontoware.org/ontology#Article, ar) <- (kisti, kisti:engAbstractOfAccomplishment, kisti:Accomplishment, ar)
+(http://swrc.ontoware.org/ontology#inJournal, http://swrc.ontoware.org/ontology#Journal, j) <- (akt, akt:article-of-journal, akt:Journal, j) AND [(kisti, kisti:hasPubInfo, kisti:PubInfo, z) AND (kisti, kisti:hasSourceOfPublication, kisti:Journal, j)]
+(http://swrc.ontoware.org/ontology#volume, http://swrc.ontoware.org/ontology#Journal, j) <- (kisti, kisti:volumeOfJournal, kisti:Journal, j)
+(http://swrc.ontoware.org/ontology#journal_name, http://swrc.ontoware.org/ontology#Journal, j) <- (akt, akt:has-title, akt:Journal, j) AND (kisti, kisti:engFullNameOfJournal, kisti:Journal, j) 
+(http://swrc.ontoware.org/ontology#year, http://swrc.ontoware.org/ontology#Journal, j) <- (akt, akt:has-date, akt:Journal, j) AND (kisti, kisti:yearOfPublication, kisti:Journal, j)
+(http://swrc.ontoware.org/ontology#title, http://swrc.ontoware.org/ontology#Proceeding, p) <- (akt, akt:has-tite, akt:Conference-Proceeding-Reference, p) AND (kisti, kisti:engNameOfProceeding, kisti:Proceeding, p)
+(http://swrc.ontoware.org/ontology#year, http://swrc.ontoware.org/ontology#Proceeding, p) <- (akt, akt:has-date, akt:Conference-Proceeding-Reference, p) AND (kisti, kisti:yearOfPublication, kisti:Proceeding, p)
+(http://swrc.ontoware.org/ontology#inProceeding, http://swrc.ontoware.org/ontology#Proceeding, p)  <- (akt, akt:cites-publication-reference, akt:Conference-Proceeding-Reference, p) AND [(kisti, kisti:hasPubInfo, kisti:PubInfo, z) AND ( kisti, kisti:hasSourceOfPublication, kisti:Proceeding, p)]
+(http://swrc.ontoware.org/ontology#affiliation, http://swrc.ontoware.org/ontology#Organization, o) <- (kisti, kisti:hasInstitutionOfCreator, kisti:Institution, o) 
+(http://swrc.ontoware.org/ontology#name, http://swrc.ontoware.org/ontology#Organization, o) <- (kisti, kisti:engNameOfInstitution, kisti:Institution, o)
+(http://swrc.ontoware.org/ontology#homepage, http://swrc.ontoware.org/ontology#Person, p) <- (kisti, kisti:urlOfPerson, kisti:Person, p) AND (dbpedia, d:wikiPageExternalLink, d:Person, p)
+(http://swrc.ontoware.org/ontology#description, http://swrc.ontoware.org/ontology#Person, p) <- (dbpedia, d:abstract, d:Person, p)
+(http://swrc.ontoware.org/ontology#name, http://swrc.ontoware.org/ontology#Person, p) <- (akt, akt:full-name, akt:Person, p) AND (kisti, kisti:engNameOfPerson, kisti:Person, p) AND (dbpedia, d:name, d:Person, p)
+(http://swrc.ontoware.org/ontology#publisher, http://swrc.ontoware.org/ontology#Person, p) <- (akt, akt:has-author, akt:Person, p) AND [(kisti, kisti:hasCreator, kisti:Person, z) AND ( kisti, kisti:hasCreatorInfo, kisti:CreatorInfo, p)]
+(http://swrc.ontoware.org/ontology#hasNumber, http://swrc.ontoware.org/ontology#Journal, j) <- (kisti, kisti:issueOfJournal, kisti:Journal, j)
+
+
+
+

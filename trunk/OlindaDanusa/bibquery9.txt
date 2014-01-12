@@ -1,0 +1,11 @@
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+
+SELECT DISTINCT ?authorName WHERE {
+  ?article swrc:title "The LHAM Log-Structured History Data Access Method" .
+  ?article swrc:publisher ?author .
+  ?author swrc:name ?authorName .
+}
+
+
+
