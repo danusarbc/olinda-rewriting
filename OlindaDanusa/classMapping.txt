@@ -1,0 +1,5 @@
+(http://swrc.ontoware.org/ontology#Article) <- (akt, akt:Article-Reference) AND (kisti, kisti:Accomplishment)
+(http://swrc.ontoware.org/ontology#Journal) <- (akt, akt:Journal) AND (kisti, kisti:Journal) 
+(http://swrc.ontoware.org/ontology#Person) <- (akt, akt:Person) AND (kisti, kisti:Person) AND (dbpedia, d:Person)
+(http://swrc.ontoware.org/ontology#Organization) <- (akt, akt:Organization)
+(http://swrc.ontoware.org/ontology#Proceeding) <- (kisti, kisti:Proceeding)

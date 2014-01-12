@@ -1,0 +1,11 @@
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+
+SELECT DISTINCT ?articleTitle ?journalTitle WHERE {
+ ?journal rdf:type swrc:Journal .
+ ?journal swrc:journal_name ?journalTitle .
+ ?article swrc:inJournal ?journal .
+ ?article swrc:title ?articleTitle .
+ ?article ?p ?year .
+ FILTER (?p = swrc:year)
+}

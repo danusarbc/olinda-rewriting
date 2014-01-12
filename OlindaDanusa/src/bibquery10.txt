@@ -1,0 +1,11 @@
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+
+SELECT ?abstract ?year ?authorName ?nameJournal WHERE {
+  ?article swrc:title "UnQL: A Query Language and Algebra for Semistructured Data Based on Structural Recursion" .
+  ?article swrc:abstract ?abstract .
+  ?article swrc:year ?year .
+  ?article swrc:inJournal ?nameJournal .
+  ?article swrc:publisher ?author .
+  ?author swrc:name ?authorName .
+}
