@@ -14,12 +14,12 @@ public class QueryReformulationTest {
 	public static void main(String[] args) {
 		
 		Dataset dataset = new Dataset("Dataset1", "http://127.0.0.1:2020/dataset1");
-		String queryFile = "bibquery2.txt";
+		String queryFile = "queries/bibquery2.txt";
 		QueryFileReader queryFileReader = new QueryFileReader();
 		QueryGraph queryGraph = queryFileReader.getQueryFromFile(queryFile, dataset);
 		
-		String predicateMappingFile = "predicateMapping.txt";
-		String classmappingFile = "classMapping.txt";
+		String predicateMappingFile = "mappings/predicateMapping.txt";
+		String classmappingFile = "mappings/classMapping.txt";
 		MappingFileReader mappingFileReader = new MappingFileReader();
 		List<Mapping> predicateMappings = mappingFileReader.getMappingsFromFileProperty(predicateMappingFile, dataset);
 		List<Mapping> classMappings = mappingFileReader.getMappingsFromFileClass(classmappingFile, dataset);
